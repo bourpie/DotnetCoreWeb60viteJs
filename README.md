@@ -21,9 +21,13 @@ NPM install as well as JS, SASS and purgeCss compilation are triggered when the 
 ### Scripts includes in package.json
 
 `npm run dev`
+
 `npm run build`
+
 `npm run preview`
+
 `npm run purgecss`
+
 `npm run watch`
 
 ## Vite.js doc
