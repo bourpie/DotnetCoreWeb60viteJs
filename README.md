@@ -1,26 +1,69 @@
 # Vite.js ASP.net Core 6.0 integration
 
-During NPM install is triggered on solution if package.json has changed. JS, SASS and purgeCss are compiled on every asp.net build trigger.
-
 ## Start the dotnet app
 
-`dotnet run`
+NPM install as well as JS, SASS and purgeCss compilation are triggered when the the ASP.net solution is built.  
 
-## From the Vite directory
+### Building from terminal
+
+`dotnet watch`  
+
+ or 
+
+`CTRL-F5 or F5` 
+
+## Vite package.json
 
 ### Install the packages
 
 `npm install`
 
-### Build JS and SASS
+### Scripts includes in package.json
 
-During frontend development, you can run the following command to build Javascript and SASS code for the dotnet solution
-
+`npm run dev`
+`npm run build`
+`npm run preview`
+`npm run purgecss`
 `npm run watch`
 
-### Purge unused CSS
+##Vite.js doc
+https://vitejs.dev/
 
-`npm run purgecss`
+##PurgeCSS 
+
+Config with Bootstrap 5 whitelisting dynamic css classes.
+
+`
+/* global module */
+/* eslint no-undef: "error" */
+module.exports = {
+    content: [`Views/**/*.cshtml`],
+    css: ['wwwroot/app/index.css'],
+    // Add css classes used from javascript to ignore purgecss :
+    safelist: [
+      'carousel-item-start', 
+      'carousel-item-end', 
+      'carousel-item-next', 
+      'carousel-item-prev', 
+      'collapsing',
+      'show',
+      'fade',
+      'collapse',
+      'collapsed',
+      'collapse-horizontal',
+      'dropdown-menu',
+      'modal-open',
+      'fade',
+      'show',
+      'modal-static',
+    ],
+    output: 'wwwroot/app/index.css',
+    keyframes: true,
+    rejected: true,
+    variables: true
+  }
+`
+
 
 ## Credits
 
