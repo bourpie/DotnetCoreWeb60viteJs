@@ -26,10 +26,10 @@ NPM install as well as JS, SASS and purgeCss compilation are triggered when the 
 `npm run purgecss`
 `npm run watch`
 
-##Vite.js doc
+## Vite.js doc
 https://vitejs.dev/
 
-##PurgeCSS 
+## PurgeCSS 
 
 Config with Bootstrap 5 whitelisting dynamic css classes.
 
