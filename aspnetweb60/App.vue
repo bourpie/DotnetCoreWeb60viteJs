@@ -1,10 +1,8 @@
 <script setup>
-
-    const message = "Hello"
-
+    import HelloWorld from './components/HelloWorld/index.vue'
+    let message = "Bonjour";
 </script>
 
 <template>
-    <h1 class="display-4">{{message}}</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+  <HelloWorld :message="message" />
 </template>

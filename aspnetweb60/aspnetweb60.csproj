@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="components\HelloWorld\" />
     <Folder Include="wwwroot\app\" />
   </ItemGroup>
   <!--
@@ -24,7 +25,7 @@
           <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
         </PropertyGroup>
      -->
-    <Exec Command="npm ci"      Condition="$(RestorePackagesWithLockFile) == 'true'" />
+    <Exec Command="npm ci" Condition="$(RestorePackagesWithLockFile) == 'true'" />
     <Exec Command="npm install" Condition="$(RestorePackagesWithLockFile) != 'true'" />
 
     <!-- Write the stamp file, so incremental builds work -->
